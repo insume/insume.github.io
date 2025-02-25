@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>کیوی VPN</title>
+    <style>
+        @font-face {
+            font-family: 'SF Pro Arabic';
+            src: url('https://cdnjs.cloudflare.com/ajax/libs/sf-pro-display/1.0.0/sf-pro-display-regular.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        body {
+            font-family: 'SF Pro Arabic', 'Vazirmatn', 'Tahoma', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-image: radial-gradient(#8bc34a20 15%, transparent 16%), 
+                              radial-gradient(#8bc34a20 15%, transparent 16%);
+            background-size: 60px 60px;
+            background-position: 0 0, 30px 30px;
+            text-align: right;
+        }
+        
+        .container {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-top: 5px solid #76a912;
+            position: relative;
+        }
+        
+        h1 {
+            color: #76a912;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        
+        .kiwi-logo {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            background-color: #76a912;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .kiwi-inner {
+            width: 40px;
+            height: 40px;
+            background-color: #a5d152;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .kiwi-inner::after {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: #f5f5dc;
+            border-radius: 50%;
+            top: 5px;
+            left: 5px;
+        }
+        
+        p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #555;
+            font-size: 1.1em;
+            text-align: right;
+        }
+        
+        .input-container {
+            position: relative;
+            margin-bottom: 30px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        
+        .input-container:focus-within {
+            border-color: #76a912;
+            box-shadow: 0 0 0 3px rgba(118, 169, 18, 0.2);
+        }
+        
+        input {
+            width: calc(100% - 120px);
+            padding: 15px;
+            border: none;
+            outline: none;
+            font-size: 0.9em;
+            text-align: left; /* For VPN access links which are LTR */
+            font-family: 'SF Pro Arabic', 'Vazirmatn', 'Tahoma', sans-serif;
+            direction: ltr;
+        }
+        
+        .copy-btn {
+            position: relative;
+            height: 100%;
+            width: 100px;
+            background-color: #76a912;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            font-family: 'SF Pro Arabic', 'Vazirmatn', 'Tahoma', sans-serif;
+        }
+        
+        .copy-btn:hover {
+            background-color: #5c8410;
+        }
+        
+        .copy-btn:active {
+            background-color: #4a6b0e;
+        }
+        
+        .kiwi-decoration {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .kiwi-decoration.top-right {
+            top: 20px;
+            right: 20px;
+            transform: rotate(45deg);
+        }
+        
+        .kiwi-decoration.bottom-left {
+            bottom: 20px;
+            left: 20px;
+            transform: rotate(-135deg);
+        }
+        
+        .instruction-step {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background-color: #76a912;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            margin-left: 10px;
+            flex-shrink: 0;
+        }
+        
+        .instruction-box {
+            background-color: #f5f7f0;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-right: 3px solid #76a912;
+        }
+        
+        h2 {
+            color: #5c8410;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="kiwi-logo">
+            <div class="kiwi-inner">
+            </div>
+        </div>
+        
+        <h1>کیوی VPN</h1>
+        
+        <div class="instruction-box">
+            <h2>آموزش راه‌اندازی</h2>
+            <div class="instruction-step">
+            <div class="step-number">۱</div>
+                <span>نرم‌افزار Outline را از <a href="https://getoutline.org/get-started/" target="_blank">سایت رسمی</a> و یا اپ‌استور/گوگل پلی دانلود و نصب کنید.</span>
+            </div>
+        <div class="instruction-step">
+        <div class="step-number">۲</div>
+        <span>لینک دسترسی اختصاصی Outline شما در زیر قرار دارد. برای اتصال به سرویس VPN کیوی، این لینک را کپی کرده و در نرم‌افزار Outline وارد کنید. این لینک منحصر به فرد شماست و نباید آن را با دیگران به اشتراک بگذارید.</span>
+        </div>
+        
+        <h3>لینک دسترسی شمارهٔ ۱</h3>
+        <div class="input-container">
+            <input type="text" id="input1" value="ssconf://insume.github.io/DAK1.json#Sanaz1" readonly>
+            <button class="copy-btn" onclick="copyText('input1')">کپی</button>
+        </div>
+        
+        <h3>لینک دسترسی شمارهٔ ۲</h3>
+        <div class="input-container">
+            <input type="text" id="input2" value="ssconf://insume.github.io/DAK2.json#Sanaz2" readonly>
+            <button class="copy-btn" onclick="copyText('input2')">کپی</button>
+        </div>
+        
+        <p>
+        ۹۹٪ مواقع هر دو سرور چالاک و آمادهٔ اتصال هستند. در صورتی که اتصال به سرور شمارهٔ ۱ موفقیت‌آمیز نبود، از سرور شمارهٔ ۲ استفاده کنید.
+        </p>
+        </div>
+        <div class="instruction-box">
+            <h2>پشتیبانی</h2>
+            <p>در صورت بروز هرگونه مشکل یا سوال، با پشتیبانی کیوی VPN از طریق تلگرام تماس بگیرید. پشتیبانی در زودترین زمان ممکن آماده پاسخگویی به سوالات شماست.</p>
+        </div>
+    </div>
+
+    <script>
+        function copyText(inputId) {
+            const input = document.getElementById(inputId);
+            input.select();
+            input.setSelectionRange(0, 99999);
+            document.execCommand("copy");
+            
+            const btn = input.nextElementSibling;
+            const originalText = btn.innerText;
+            btn.innerText = "کپی شد!";
+            
+            setTimeout(() => {
+                btn.innerText = originalText;
+            }, 1500);
+        }
+    </script>
+</body>
+</html>
