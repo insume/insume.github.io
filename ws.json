@@ -1,8 +1,0 @@
-{
-  "server": "188.130.207.79",
-  "port": 10094,
-  "password": "Y3c2gxa9mg",
-  "method": "aes-256-gcm",
-  "remarks": "Paris",
-  "protocol": "shadowsocks"
-}
